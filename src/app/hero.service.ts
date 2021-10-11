@@ -21,7 +21,7 @@ export class HeroService {
     this.messageService.add(`HeroService: ${message}`);
   }
 
-  private handlerRror<T>(operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
       console.error(error);
